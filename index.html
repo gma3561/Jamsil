@@ -67,18 +67,26 @@
         <!-- 메인 비주얼 (비디오 배경) -->
         <section class="main-visual">
             <div class="video-background">
-                <video autoplay muted loop id="main-video">
-                    <source src="https://drive.google.com/uc?export=download&id=1DicAn7ikKcZAex0oJMW58OMsRJqBtWPR" type="video/mp4">
-                    <!-- 구글 드라이브 직접 스트리밍이 안 될 경우 iframe 대체 -->
-                    귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
-                </video>
-                <!-- 백업용 iframe (video 태그가 작동하지 않을 경우) -->
-                <iframe 
-                    src="https://drive.google.com/file/d/1DicAn7ikKcZAex0oJMW58OMsRJqBtWPR/preview" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: none;"
-                    id="backup-video"
-                    allow="autoplay">
-                </iframe>
+                <!-- 프리미엄 아파트 배경 영상 (YouTube 임베드) -->
+                <!-- 실제 영상 대신 고품질 이미지 슬라이드쇼 사용 -->
+                <div class="image-slideshow" id="main-slideshow">
+                    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+                </div>
+                <!-- 백업용 고정 이미지 -->
+                <div class="video-fallback" style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(135deg, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), 
+                                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                    background-size: cover;
+                    background-position: center;
+                    z-index: -1;
+                "></div>
             </div>
             <div class="main-visual-inner">
                 <div class="main-visual-content">
@@ -107,28 +115,28 @@
                 <ul class="service-list">
                     <li class="service-item">
                         <div class="service-icon">
-                            <img src="./images/icon-apartment.png" alt="프리미엄 브랜드">
+                            🏢
                         </div>
                         <h3 class="service-title">프리미엄 브랜드</h3>
                         <p class="service-desc">삼성C&T 래미안과 HDC 아이파크의 브랜드 가치</p>
                     </li>
                     <li class="service-item">
                         <div class="service-icon">
-                            <img src="./images/icon-office.png" alt="교통 입지">
+                            🚇
                         </div>
                         <h3 class="service-title">최고의 교통</h3>
                         <p class="service-desc">8호선 몽촌토성역 139m, 롯데월드타워 도보 6분</p>
                     </li>
                     <li class="service-item">
                         <div class="service-icon">
-                            <img src="./images/icon-house.png" alt="대단지">
+                            🏙️
                         </div>
                         <h3 class="service-title">대단지 규모</h3>
                         <p class="service-desc">2,678세대 23개동 지하 5층~지상 35층</p>
                     </li>
                     <li class="service-item">
                         <div class="service-icon">
-                            <img src="./images/icon-commercial.png" alt="입주시기">
+                            ⏰
                         </div>
                         <h3 class="service-title">빠른 입주</h3>
                         <p class="service-desc">2025년 12월 입주 예정</p>
@@ -149,7 +157,7 @@
                     <li class="property-item">
                         <a href="special.html#type-43" class="property-link">
                             <div class="property-thumb">
-                                <img src="./images/floor-43.jpg" alt="43㎡ 타입">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="43㎡ 타입">
                                 <span class="property-badge">분양</span>
                             </div>
                             <div class="property-info">
@@ -163,7 +171,7 @@
                     <li class="property-item">
                         <a href="special.html#type-74" class="property-link">
                             <div class="property-thumb">
-                                <img src="./images/floor-74.jpg" alt="74㎡ 타입">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="74㎡ 타입">
                                 <span class="property-badge">분양</span>
                             </div>
                             <div class="property-info">
@@ -177,7 +185,7 @@
                     <li class="property-item">
                         <a href="special.html#type-104" class="property-link">
                             <div class="property-thumb">
-                                <img src="./images/floor-104.jpg" alt="104㎡ 타입">
+                                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="104㎡ 타입">
                                 <span class="property-badge">분양</span>
                             </div>
                             <div class="property-info">
@@ -208,7 +216,7 @@
                     <li class="news-item">
                         <a href="news-detail.html" class="news-link">
                             <div class="news-thumb">
-                                <img src="./images/news-sample1.jpg" alt="부동산 뉴스">
+                                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="부동산 뉴스">
                             </div>
                             <div class="news-info">
                                 <h3 class="news-title">잠실 래미안 아이파크 분양 일정 확정</h3>
@@ -220,7 +228,7 @@
                     <li class="news-item">
                         <a href="news-detail.html" class="news-link">
                             <div class="news-thumb">
-                                <img src="./images/news-sample2.jpg" alt="부동산 뉴스">
+                                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="부동산 뉴스">
                             </div>
                             <div class="news-info">
                                 <h3 class="news-title">몽촌토성역 인근 인프라 확장 계획</h3>
