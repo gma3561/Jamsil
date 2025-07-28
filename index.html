@@ -67,26 +67,15 @@
         <!-- 메인 비주얼 (비디오 배경) -->
         <section class="main-visual">
             <div class="video-background">
-                <!-- 프리미엄 아파트 배경 영상 (YouTube 임베드) -->
-                <!-- 실제 영상 대신 고품질 이미지 슬라이드쇼 사용 -->
-                <div class="image-slideshow" id="main-slideshow">
-                    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-                </div>
-                <!-- 백업용 고정 이미지 -->
-                <div class="video-fallback" style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(135deg, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), 
-                                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-                    background-size: cover;
-                    background-position: center;
-                    z-index: -1;
-                "></div>
+                <!-- 잠실 래미안 아이파크 배경 영상 -->
+                <iframe 
+                    id="main-video"
+                    src="https://www.youtube.com/embed/TeesShtQ0NM?autoplay=1&mute=1&loop=1&playlist=TeesShtQ0NM&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.78vh; pointer-events: none;">
+                </iframe>
             </div>
             <div class="main-visual-inner">
                 <div class="main-visual-content">
@@ -333,20 +322,24 @@
                     </div>
                     
                     <div class="map-info">
-                        <h3 class="map-title">잠실 래미안 아이파크 분양 현장</h3>
-                        <p class="map-address">서울특별시 송파구 신천동 20-4번지</p>
+                        <h3 class="map-title">더부동산중개법인 (분양 상담소)</h3>
+                        <p class="map-address">서울특별시 강남구 테헤란로87길 39 (삼성동, 심스빌딩)</p>
                         <ul class="map-list">
                             <li class="map-item">
                                 <span class="map-label">지하철</span>
-                                <p class="map-text">8호선 몽촌토성역 5번 출구 139m (도보 2분)</p>
+                                <p class="map-text">2호선 선릉역 1번 출구 550m (도보 7분)</p>
                             </li>
                             <li class="map-item">
-                                <span class="map-label">주요시설</span>
-                                <p class="map-text">롯데월드타워 도보 6분, 석촌호수 인근</p>
+                                <span class="map-label">버스</span>
+                                <p class="map-text">선릉역 정류장 (146, 401, 462, 721, 9303)</p>
                             </li>
                             <li class="map-item">
                                 <span class="map-label">상담 문의</span>
                                 <p class="map-text">02-2135-1367 (평일 09:00~18:00)</p>
+                            </li>
+                            <li class="map-item">
+                                <span class="map-label">이메일</span>
+                                <p class="map-text">jenny@the-realty.co.kr</p>
                             </li>
                         </ul>
                     </div>
@@ -447,13 +440,13 @@
         // 카카오맵 초기화 스크립트
         var container = document.getElementById('map');
         var options = {
-            center: new kakao.maps.LatLng(37.5124, 127.1012), // 신천동 좌표
+            center: new kakao.maps.LatLng(37.5048, 127.0486), // 더부동산중개법인 좌표 (테헤란로87길 39)
             level: 3
         };
         var map = new kakao.maps.Map(container, options);
         
         // 마커 표시
-        var markerPosition  = new kakao.maps.LatLng(37.5124, 127.1012);
+        var markerPosition  = new kakao.maps.LatLng(37.5048, 127.0486);
         var marker = new kakao.maps.Marker({
             position: markerPosition
         });

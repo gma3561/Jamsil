@@ -1,16 +1,17 @@
 // main.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 메인 비주얼 이미지 슬라이드쇼
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+    // 유튜브 비디오 자동재생 최적화
+    const mainVideo = document.getElementById('main-video');
     
-    if (slides.length > 1) {
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 5000); // 5초마다 슬라이드 전환
+    if (mainVideo) {
+        // 페이지 로드 후 비디오가 잘 재생되도록 처리
+        setTimeout(() => {
+            // iframe 새로고침으로 자동재생 확실히 실행
+            const src = mainVideo.src;
+            mainVideo.src = '';
+            mainVideo.src = src;
+        }, 1000);
     }
     
     // 메인 비주얼 패럴랙스 효과
