@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: `관심타입: ${Array.from(interestTypes).map(type => type.value).join(', ')}, 분양유형: ${document.querySelector('input[name="sale_type"]:checked').value}`
                 });
                 window.ChannelIO('sendUserChat', {
-                    message: `안녕하세요, 청담 르엘 관심고객으로 등록했습니다.\n관심타입: ${Array.from(interestTypes).map(type => type.value).join(', ')}\n분양유형: ${document.querySelector('input[name="sale_type"]:checked').value}\n문의사항: ${document.getElementById('message').value || '없음'}`
+                    message: `안녕하세요, 잠실 래미안 아이파크 관심고객으로 등록했습니다.\n관심타입: ${Array.from(interestTypes).map(type => type.value).join(', ')}\n분양유형: ${document.querySelector('input[name="sale_type"]:checked').value}\n문의사항: ${document.getElementById('message').value || '없음'}`
                 });
             }
         });
