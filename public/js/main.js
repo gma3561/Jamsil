@@ -1,6 +1,28 @@
 // main.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 구글 드라이브 비디오 로딩 체크 및 백업 처리
+    const mainVideo = document.getElementById('main-video');
+    const backupVideo = document.getElementById('backup-video');
+    
+    if (mainVideo && backupVideo) {
+        // 비디오 로딩 실패시 iframe 백업 사용
+        mainVideo.addEventListener('error', function() {
+            console.log('Main video failed, switching to backup iframe');
+            mainVideo.style.display = 'none';
+            backupVideo.style.display = 'block';
+        });
+        
+        // 비디오 로딩 시간 체크 (5초 후에도 로딩 안되면 백업 사용)
+        setTimeout(function() {
+            if (mainVideo.readyState === 0) {
+                console.log('Video loading timeout, switching to backup iframe');
+                mainVideo.style.display = 'none';
+                backupVideo.style.display = 'block';
+            }
+        }, 5000);
+    }
+    
     // 메인 비주얼 패럴랙스 효과
     const mainVisual = document.querySelector('.main-visual');
     const mainVisualContent = document.querySelector('.main-visual-content');
