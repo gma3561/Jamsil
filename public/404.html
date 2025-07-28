@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지를 찾을 수 없습니다 | 청담 르엘</title>
+    <meta http-equiv="refresh" content="0;url=/Jamsil/">
+    <script>
+        var pathSegments = window.location.pathname.split('/');
+        var repoName = 'Jamsil';
+        var redirectUrl = window.location.protocol + '//' + window.location.hostname;
+        
+        if (window.location.hostname === 'gma3561.github.io') {
+            redirectUrl += '/' + repoName;
+        }
+        
+        window.location.replace(redirectUrl);
+    </script>
+</head>
+<body>
+    <p>페이지를 찾을 수 없습니다. 메인 페이지로 이동합니다...</p>
+</body>
+</html>
