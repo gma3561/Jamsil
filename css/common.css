@@ -1,24 +1,33 @@
 /* common.css */
 :root {
-    /* 색상 변수 */
-    --primary-color: #bd9c60;
-    --secondary-color: #333;
-    --accent-color: #bd9c60;
-    --text-color: #333;
-    --text-light: #666;
-    --text-lighter: #999;
-    --bg-light: #f9f9f9;
-    --bg-white: #fff;
-    --border-color: #eee;
+    /* 모던 색상 팔레트 */
+    --primary-color: #c8aa6e;
+    --primary-dark: #b8996b;
+    --secondary-color: #1a1a1a;
+    --accent-color: #f4f1ea;
+    --text-color: #0f0f0f;
+    --text-light: #525252;
+    --text-lighter: #a3a3a3;
+    --bg-light: #fafafa;
+    --bg-white: #ffffff;
+    --bg-dark: #1a1a1a;
+    --border-color: #e5e5e5;
+    --border-light: #f3f4f6;
     
-    /* 폰트 사이즈 */
+    /* 모던 폰트 사이즈 */
     --font-xs: 12px;
     --font-sm: 14px;
     --font-md: 16px;
     --font-lg: 18px;
     --font-xl: 24px;
     --font-xxl: 32px;
-    --font-title: 48px;
+    --font-title: 56px;
+    --font-display: 72px;
+    
+    /* 폰트 패밀리 */
+    --font-korean: 'SUIT', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-english: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-display: 'Playfair Display', 'SUIT', serif;
     
     /* 여백 */
     --space-xs: 4px;
@@ -27,22 +36,40 @@
     --space-lg: 24px;
     --space-xl: 32px;
     --space-xxl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 80px;
     
     /* 반응형 */
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    
+    /* 그림자 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* 전환 효과 */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
 }
 
 /* 기본 스타일 */
 body {
-    font-family: 'Pretendard', 'Montserrat', sans-serif;
+    font-family: var(--font-korean);
     font-size: var(--font-md);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
     word-break: keep-all;
     overflow-x: hidden;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -60,24 +87,28 @@ section {
 /* 타이틀 스타일 */
 .section-title {
     text-align: center;
-    margin-bottom: var(--space-xl);
-    font-weight: 600;
-    font-size: var(--font-xl);
-    line-height: 1.4;
+    margin-bottom: var(--space-4xl);
+    font-family: var(--font-korean);
+    font-weight: 300;
+    font-size: clamp(var(--font-xl), 3vw, var(--font-xxl));
+    line-height: 1.3;
+    letter-spacing: -0.02em;
 }
 
 .section-title .small {
     display: block;
-    font-size: var(--font-sm);
-    color: var(--accent-color);
+    font-family: var(--font-english);
+    font-size: var(--font-xs);
+    color: var(--text-lighter);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: var(--space-sm);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-md);
+    font-weight: 500;
 }
 
 .section-title .highlight {
     color: var(--primary-color);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* 버튼 스타일 */
