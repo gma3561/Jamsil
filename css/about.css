@@ -90,77 +90,73 @@
     margin-left: var(--space-sm);
 }
 
-/* 회사 연혁 영역 */
-.history {
-    padding: var(--space-xxl) 0;
-}
-
-.history-list {
-    margin-top: var(--space-xl);
-    position: relative;
-}
-
-.history-list::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 120px;
-    width: 2px;
-    background-color: var(--border-color);
-}
-
-.history-item {
-    display: flex;
-    margin-bottom: var(--space-xl);
-    position: relative;
-}
-
-.history-item:last-child {
-    margin-bottom: 0;
-}
-
-.history-item::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 120px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    transform: translateX(-7px);
-    z-index: 1;
-}
-
-.year {
-    width: 100px;
-    font-size: var(--font-xl);
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.history-content {
-    flex: 1;
-    padding-left: var(--space-xl);
-}
-
-.history-content h4 {
-    font-size: var(--font-lg);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-    color: var(--secondary-color);
-}
-
-.history-content p {
-    margin-bottom: var(--space-xs);
-    color: var(--text-light);
-}
-
 /* 비전 및 미션 영역 */
 .vision {
     background-color: var(--bg-light);
     padding: var(--space-xxl) 0;
+}
+
+.vision-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.vision-title-section {
+    padding-right: var(--space-xl);
+}
+
+.vision-title-section .section-title {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.vision-intro-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.vision-intro {
+    font-size: var(--font-lg);
+    line-height: 1.8;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.vision-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.vision-item {
+    background-color: var(--bg-white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    border-left: 4px solid var(--primary-color);
+}
+
+.vision-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vision-title {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.vision-desc {
+    font-size: var(--font-md);
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
 }
 
 .vision-wrapper {
@@ -173,37 +169,38 @@
 .vision-item {
     background-color: var(--bg-white);
     padding: var(--space-xl);
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
 }
 
 .vision-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
 .vision-icon {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .vision-icon img {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
 }
 
 .vision-title {
     font-size: var(--font-lg);
     font-weight: 600;
-    margin-bottom: var(--space-md);
     color: var(--secondary-color);
+    margin-bottom: var(--space-sm);
 }
 
 .vision-desc {
-    font-size: var(--font-md);
-    color: var(--text-light);
+    font-size: var(--font-sm);
     line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
 }
 
 /* 오시는 길 영역 */
@@ -265,27 +262,112 @@
     color: var(--text-color);
 }
 
+/* 회사 연혁 영역 */
+.history {
+    padding: var(--space-xxl) 0;
+}
+
+.history-list {
+    margin-top: var(--space-xl);
+    position: relative;
+    margin-left: var(--space-3xl);
+}
+
+.history-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 120px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.history-item {
+    display: flex;
+    margin-bottom: var(--space-xl);
+    position: relative;
+}
+
+.history-item:last-child {
+    margin-bottom: 0;
+}
+
+.history-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translateX(-7px);
+    z-index: 1;
+}
+
+.year {
+    width: 100px;
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.history-content {
+    flex: 1;
+    padding-left: var(--space-xl);
+}
+
+.history-content h4 {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--secondary-color);
+}
+
+.history-content p {
+    margin-bottom: var(--space-xs);
+    color: var(--text-light);
+}
+
 /* 반응형 스타일 */
 @media (max-width: 992px) {
     .about-intro .container,
     .ceo-message .container {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
     
     .about-content,
     .ceo-content {
-        order: 1;
+        order: 2;
     }
     
     .about-image,
     .ceo-image {
-        order: 0;
-        margin-bottom: var(--space-lg);
+        order: 1;
+    }
+
+    .vision-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
     
+    .vision-title-section {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .vision-title-section .section-title {
+        text-align: center;
+    }
+    
+    .vision-intro-section {
+        gap: var(--space-lg);
+    }
+
     .vision-wrapper {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .location-wrapper {
@@ -306,20 +388,46 @@
         font-size: var(--font-md);
     }
     
+    .history-list {
+        margin-left: var(--space-sm);
+    }
+    
     .history-list::before {
-        left: 70px;
+        display: none;
     }
     
     .history-item::before {
-        left: 70px;
+        display: none;
     }
     
     .year {
+        font-size: var(--font-sm);
+        padding: 4px 8px;
         width: 60px;
-        font-size: var(--font-lg);
     }
     
     .history-content {
-        padding-left: var(--space-lg);
+        margin-left: 0;
+        padding-left: var(--space-sm);
+    }
+    
+    .history-content h4 {
+        font-size: var(--font-md);
+    }
+    
+    .history-content p {
+        font-size: var(--font-sm);
+    }
+    
+    .vision-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-cards {
+        gap: var(--space-md);
+    }
+    
+    .vision-item {
+        padding: var(--space-lg);
     }
 }

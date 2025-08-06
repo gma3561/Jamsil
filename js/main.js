@@ -94,36 +94,4 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(counter);
         });
     }
-    
-    // 모바일에서 매물 아이템 터치 시 호버 효과
-    const propertyItems = document.querySelectorAll('.property-item');
-    
-    if(propertyItems.length > 0 && 'ontouchstart' in window) {
-        propertyItems.forEach(item => {
-            item.addEventListener('touchstart', function() {
-                this.classList.add('touch-hover');
-            }, { passive: true });
-            
-            item.addEventListener('touchend', function() {
-                setTimeout(() => {
-                    this.classList.remove('touch-hover');
-                }, 300);
-            }, { passive: true });
-        });
-    }
-    
-    // 문의 폼 입력 필드 포커스 효과
-    const formInputs = document.querySelectorAll('.form-input, .form-textarea, .form-select');
-    
-    if(formInputs.length > 0) {
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.classList.remove('focused');
-            });
-        });
-    }
 });

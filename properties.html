@@ -33,35 +33,7 @@
     <a href="#main" class="skip-nav">본문 바로가기</a>
     
     <!-- 헤더 영역 -->
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="더부동산중개법인">
-                </a>
-            </h1>
-            
-            <nav class="gnb" role="navigation" aria-label="주 메뉴">
-                <ul class="gnb-list">
-                    <li class="gnb-item"><a href="index.html" class="gnb-link">잠실 래미안 아이파크</a></li>
-                    <li class="gnb-item"><a href="about.html" class="gnb-link">사업 정보</a></li>
-                    <li class="gnb-item"><a href="properties.html" class="gnb-link active">단지 정보</a></li>
-                    <li class="gnb-item"><a href="special.html" class="gnb-link">평면 정보</a></li>
-                    <li class="gnb-item"><a href="news.html" class="gnb-link">부동산 뉴스</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-contact">
-                <a href="tel:02-2135-1367" class="header-phone">02-2135-1367</a>
-            </div>
-            
-            <button type="button" class="mobile-menu-btn" aria-label="모바일 메뉴 열기">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </header>
+    <div id="header-container"></div>
     
     <!-- 메인 영역 -->
     <main class="main" id="main">
@@ -73,586 +45,101 @@
             </div>
         </section>
         
-        <!-- 단지 개요 -->
-        <section class="complex-overview">
+        <!-- 탭 시스템 -->
+        <section class="tabs-section">
             <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Complex Overview</span>
-                    잠실 래미안 아이파크 단지 개요
-                </h3>
-                
-                <div class="overview-grid">
-                    <div class="overview-item">
-                        <div class="overview-icon">
-                            <img src="images/icon-location.png" alt="위치">
-                        </div>
-                        <h4 class="overview-title">위치</h4>
-                        <p class="overview-desc">서울특별시 강남구 청담동 일대<br>한강 인접 프리미엄 입지</p>
+                <div class="tabs-container">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="tab1">
+    
+                            <span class="tab-text">디자인 계획 </span>
+                        </button>
+                        <button class="tab-btn" data-tab="tab2">
+                            <span class="tab-text">조경 계획</span>
+                        </button>
+                        <button class="tab-btn" data-tab="tab3">
+                            <span class="tab-text">커뮤니티</span>
+                        </button>
+                        <button class="tab-btn" data-tab="tab4">
+                            <span class="tab-text">건물 배치도</span>
+                        </button>
                     </div>
                     
-                    <div class="overview-item">
-                        <div class="overview-icon">
-                            <img src="images/icon-scale.png" alt="규모">
+                    <div class="tabs-content">
+                        <div class="tab-panel active" id="tab1">
+                            <div class="tab-image">
+                                <img src="images/design-plan.jpg" alt="디자인 계획">
+                            </div>
                         </div>
-                        <h4 class="overview-title">규모</h4>
-                        <p class="overview-desc">지상 25층 ~ 30층<br>총 500여 세대</p>
-                    </div>
-                    
-                    <div class="overview-item">
-                        <div class="overview-icon">
-                            <img src="images/icon-type.png" alt="타입">
-                        </div>
-                        <h4 class="overview-title">공급 타입</h4>
-                        <p class="overview-desc">84㎡ ~ 143㎡<br>3룸 ~ 4룸</p>
-                    </div>
-                    
-                    <div class="overview-item">
-                        <div class="overview-icon">
-                            <img src="images/icon-completion.png" alt="준공">
-                        </div>
-                        <h4 class="overview-title">준공 예정</h4>
-                        <p class="overview-desc">2026년 12월<br>입주 예정</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 위치 정보 -->
-        <section class="location-info">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Location</span>
-                    프리미엄 입지
-                </h3>
-                
-                <div class="location-grid">
-                    <div class="location-map">
-                        <div id="complex-map" class="map-container">
-                            <!-- 카카오맵이 로드될 영역 -->
-                        </div>
-                    </div>
-                    
-                    <div class="location-details">
-                        <h4 class="location-subtitle">한강을 마주하는 최고의 입지</h4>
-                        <p class="location-description">
-                            잠실 래미안 아이파크은 한강을 바로 마주하는 프리미엄 입지에 위치하여 
-                            사계절 아름다운 한강의 풍경을 감상할 수 있습니다. 
-                            강남의 중심지인 청담동에서 도심과 자연이 조화를 이루는 
-                            최상의 주거 환경을 제공합니다.
-                        </p>
                         
-                        <ul class="location-benefits">
-                            <li class="benefit-item">
-                                <span class="benefit-label">한강뷰</span>
-                                <span class="benefit-text">한강을 마주한 탁 트인 전망</span>
-                            </li>
-                            <li class="benefit-item">
-                                <span class="benefit-label">도심 접근성</span>
-                                <span class="benefit-text">강남 중심가 5분 거리</span>
-                            </li>
-                            <li class="benefit-item">
-                                <span class="benefit-label">자연환경</span>
-                                <span class="benefit-text">한강공원 도보 접근 가능</span>
-                            </li>
-                        </ul>
+                        <div class="tab-panel" id="tab2">
+                            <div class="tab-image">
+                                <img src="images/landscape-plan.jpg" alt="한강 뷰">
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="tab3">
+                            <div class="tab-image">
+                                <img src="images/community.jpg" alt="커뮤니티 시설">
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="tab4">
+                            <div class="tab-image">
+                                <img src="images/building-layout.jpg" alt="동별 배치도">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+                       
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 교통 정보 -->
-        <section class="transportation">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Transportation</span>
-                    교통 정보
-                </h3>
-                
-                <div class="transport-grid">
-                    <div class="transport-item">
-                        <div class="transport-icon">
-                            <img src="images/icon-subway.png" alt="지하철">
-                        </div>
-                        <h4 class="transport-title">지하철</h4>
-                        <ul class="transport-list">
-                            <li>압구정역 (3호선) 도보 10분</li>
-                            <li>청담역 (7호선) 도보 12분</li>
-                            <li>압구정로데오역 (7호선) 도보 15분</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="transport-item">
-                        <div class="transport-icon">
-                            <img src="images/icon-bus.png" alt="버스">
-                        </div>
-                        <h4 class="transport-title">버스</h4>
-                        <ul class="transport-list">
-                            <li>청담동 사거리 정류장 (도보 3분)</li>
-                            <li>간선: 143, 146, 301, 401</li>
-                            <li>지선: 6411, 3411, 3414</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="transport-item">
-                        <div class="transport-icon">
-                            <img src="images/icon-car.png" alt="차량">
-                        </div>
-                        <h4 class="transport-title">차량</h4>
-                        <ul class="transport-list">
-                            <li>강남대로, 테헤란로 인접</li>
-                            <li>올림픽대로 진입 5분</li>
-                            <li>한남대교, 청담대교 인근</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         
-        <!-- 디자인 플랜 -->
-        <section class="design-plan">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Design Plan</span>
-                    <span class="highlight">단지 설계</span> 마스터플랜
-                </h3>
-                
-                <div class="design-content">
-                    <div class="design-image">
-                        <img src="images/design-plan.jpg" alt="단지 설계도">
-                    </div>
-                    
-                    <div class="design-details">
-                        <h4 class="design-subtitle">2,678세대 중 일반분양 589세대</h4>
-                        <div class="design-grid">
-                            <div class="design-item">
-                                <span class="design-label">43㎡A</span>
-                                <span class="design-value">114세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">43㎡B</span>
-                                <span class="design-value">49세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">51㎡</span>
-                                <span class="design-value">58세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">59㎡A</span>
-                                <span class="design-value">93세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">59㎡B</span>
-                                <span class="design-value">117세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">74㎡A</span>
-                                <span class="design-value">43세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">74㎡B</span>
-                                <span class="design-value">91세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">84㎡A</span>
-                                <span class="design-value">4세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">84㎡B</span>
-                                <span class="design-value">9세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">84㎡C</span>
-                                <span class="design-value">4세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">104㎡A</span>
-                                <span class="design-value">4세대</span>
-                            </div>
-                            <div class="design-item">
-                                <span class="design-label">104㎡B</span>
-                                <span class="design-value">3세대</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 조경 계획 -->
-        <section class="landscape-plan">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Landscape</span>
-                    자연 속에서 <span class="highlight">다채로운 삶</span>의 프리미엄을 즐길 수 있습니다
-                </h3>
-                
-                <div class="landscape-image">
-                    <img src="images/landscape-plan.jpg" alt="조경 계획도">
-                </div>
-                
-                <div class="landscape-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">🌿</div>
-                        <h4 class="feature-title">유나이트스케어</h4>
-                        <p class="feature-desc">단지의 중앙을 가로지르며 외부 커뮤니티를 연결하는 소통과 어울림의 가로입니다.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🏞️</div>
-                        <h4 class="feature-title">커뮤니티가든</h4>
-                        <p class="feature-desc">문화, 예술, 자연 등 다양한 테마로 조성되는 커뮤니티 가든에서는 선택과 휴식을 즐길 수 있습니다.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🎮</div>
-                        <h4 class="feature-title">어린이 놀이터</h4>
-                        <p class="feature-desc">아이들의 상상력을 키우고 신체 발달을 돕는 복합놀이시설이 조성됩니다.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🌳</div>
-                        <h4 class="feature-title">주민운동시설</h4>
-                        <p class="feature-desc">다양한 야외 운동시설로 건강하고 활기찬 일상을 완성합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 커뮤니티 시설 -->
-        <section class="community-section">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Community</span>
-                    라이프스타일을 <span class="highlight">완성</span>하는 커뮤니티
-                </h3>
-                
-                <div class="community-image">
-                    <img src="images/community.jpg" alt="커뮤니티 시설">
-                </div>
-                
-                <div class="community-grid">
-                    <div class="community-category">
-                        <h4 class="category-title">🏋️‍♂️ 피트니스 & 웰니스</h4>
-                        <ul class="community-list">
-                            <li>GX룸 (그룹 운동 프로그램)</li>
-                            <li>피트니스센터</li>
-                            <li>요가룸</li>
-                            <li>사우나</li>
-                            <li>골프연습장</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="community-category">
-                        <h4 class="category-title">📚 교육 & 문화</h4>
-                        <ul class="community-list">
-                            <li>키즈카페</li>
-                            <li>독서실</li>
-                            <li>작은도서관</li>
-                            <li>멀티미디어룸</li>
-                            <li>음악연습실</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="community-category">
-                        <h4 class="category-title">🎉 소통 & 여가</h4>
-                        <ul class="community-list">
-                            <li>라운지</li>
-                            <li>카페</li>
-                            <li>파티룸</li>
-                            <li>게스트하우스</li>
-                            <li>공동작업공간</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="community-category">
-                        <h4 class="category-title">🚗 편의 시설</h4>
-                        <ul class="community-list">
-                            <li>무인택배보관함</li>
-                            <li>세차장</li>
-                            <li>자전거보관소</li>
-                            <li>관리사무소</li>
-                            <li>경비실</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 동별 배치도 -->
-        <section class="building-layout">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Building Layout</span>
-                    <span class="highlight">동별 배치도</span>
-                </h3>
-                
-                <div class="layout-image">
-                    <img src="images/building-layout.jpg" alt="동별 배치도">
-                </div>
-                
-                <div class="layout-info">
-                    <div class="layout-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">23</span>
-                            <span class="stat-label">개동</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">2,678</span>
-                            <span class="stat-label">세대</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">35</span>
-                            <span class="stat-label">층 최고층</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">지하5</span>
-                            <span class="stat-label">층 지하</span>
-                        </div>
-                    </div>
-                    
-                    <div class="layout-features">
-                        <h4 class="features-title">배치 특징</h4>
-                        <ul class="features-list">
-                            <li>동간 이격거리 최대 확보로 프라이버시 보장</li>
-                            <li>남향 위주의 배치로 일조권 최적화</li>
-                            <li>중앙 조경공간을 중심으로 한 단지 설계</li>
-                            <li>각 동별 전용 출입구 및 엘리베이터 분리</li>
-                            <li>지하주차장 동별 직접 연결</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 주변 시설 -->
-        <section class="facilities">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Facilities</span>
-                    주변 생활 시설
-                </h3>
-                
-                <div class="facilities-grid">
-                    <div class="facility-category">
-                        <h4 class="facility-title">교육 시설</h4>
-                        <ul class="facility-list">
-                            <li class="facility-item">
-                                <span class="facility-name">청담초등학교</span>
-                                <span class="facility-distance">도보 5분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담중학교</span>
-                                <span class="facility-distance">도보 8분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담고등학교</span>
-                                <span class="facility-distance">도보 10분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">대치동 학원가</span>
-                                <span class="facility-distance">차량 15분</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="facility-category">
-                        <h4 class="facility-title">쇼핑 시설</h4>
-                        <ul class="facility-list">
-                            <li class="facility-item">
-                                <span class="facility-name">갤러리아 백화점</span>
-                                <span class="facility-distance">도보 10분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담 명품거리</span>
-                                <span class="facility-distance">도보 5분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">현대백화점 무역센터점</span>
-                                <span class="facility-distance">차량 10분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">코엑스몰</span>
-                                <span class="facility-distance">차량 15분</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="facility-category">
-                        <h4 class="facility-title">의료 시설</h4>
-                        <ul class="facility-list">
-                            <li class="facility-item">
-                                <span class="facility-name">삼성서울병원</span>
-                                <span class="facility-distance">차량 10분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담동 의료복합센터</span>
-                                <span class="facility-distance">도보 5분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">서울아산병원</span>
-                                <span class="facility-distance">차량 20분</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="facility-category">
-                        <h4 class="facility-title">여가 시설</h4>
-                        <ul class="facility-list">
-                            <li class="facility-item">
-                                <span class="facility-name">한강공원</span>
-                                <span class="facility-distance">도보 3분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담공원</span>
-                                <span class="facility-distance">도보 7분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">뚝섬한강공원</span>
-                                <span class="facility-distance">차량 5분</span>
-                            </li>
-                            <li class="facility-item">
-                                <span class="facility-name">청담 골프클럽</span>
-                                <span class="facility-distance">차량 10분</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 단지 내 시설 -->
-        <section class="complex-facilities">
-            <div class="container">
-                <h3 class="section-title">
-                    <span class="small">Community</span>
-                    단지 내 커뮤니티 시설
-                </h3>
-                
-                <div class="community-grid">
-                    <div class="community-item">
-                        <div class="community-image">
-                            <img src="images/facility-fitness.jpg" alt="피트니스센터">
-                        </div>
-                        <div class="community-info">
-                            <h4 class="community-title">프리미엄 피트니스센터</h4>
-                            <p class="community-desc">최신 운동기구와 전문 트레이너가 상주하는 피트니스센터로 건강한 라이프스타일을 지원합니다.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="community-item">
-                        <div class="community-image">
-                            <img src="images/facility-library.jpg" alt="도서관">
-                        </div>
-                        <div class="community-info">
-                            <h4 class="community-title">커뮤니티 라이브러리</h4>
-                            <p class="community-desc">조용한 독서 공간과 스터디룸을 갖춘 도서관으로 지적 여가 활동을 즐길 수 있습니다.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="community-item">
-                        <div class="community-image">
-                            <img src="images/facility-kids.jpg" alt="키즈카페">
-                        </div>
-                        <div class="community-info">
-                            <h4 class="community-title">키즈 플레이존</h4>
-                            <p class="community-desc">안전하고 재미있는 놀이 공간으로 아이들의 창의력과 사회성 발달을 돕습니다.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="community-item">
-                        <div class="community-image">
-                            <img src="images/facility-lounge.jpg" alt="라운지">
-                        </div>
-                        <div class="community-info">
-                            <h4 class="community-title">스카이 라운지</h4>
-                            <p class="community-desc">한강뷰를 감상하며 여유로운 시간을 보낼 수 있는 프리미엄 라운지 공간입니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
     </main>
     
     <!-- 푸터 영역 -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="images/logo-white.png" alt="더부동산중개법인">
-                    </div>
-                    <ul class="footer-contact">
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">상호명</span>
-                            <span class="footer-contact-text">더부동산중개법인</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">대표자</span>
-                            <span class="footer-contact-text">정연서</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">사업자등록번호</span>
-                            <span class="footer-contact-text">506-88-02125</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">중개등록번호</span>
-                            <span class="footer-contact-text">11680-2021-00454</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">주소</span>
-                            <span class="footer-contact-text">서울특별시 강남구 테헤란로87길 39 (삼성동, 심스빌딩)</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">전화</span>
-                            <span class="footer-contact-text">02-2135-1367</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">이메일</span>
-                            <span class="footer-contact-text">jenny@the-realty.co.kr</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-links-title">바로가기</h3>
-                    <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">홈</a></li>
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">사업 정보</a></li>
-                        <li class="footer-menu-item"><a href="properties.html" class="footer-menu-link">단지 정보</a></li>
-                        <li class="footer-menu-item"><a href="special.html" class="footer-menu-link">평면 정보</a></li>
-                        <li class="footer-menu-item"><a href="news.html" class="footer-menu-link">부동산 뉴스</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h3 class="footer-newsletter-title">뉴스레터 구독</h3>
-                    <p class="footer-newsletter-desc">최신 부동산 소식을 받아보세요.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="이메일 주소" class="newsletter-input">
-                        <button type="submit" class="newsletter-btn">구독</button>
-                    </form>
-                    <div class="footer-social">
-                        <a href="#" class="social-link"><img src="images/icon-kakao.png" alt="카카오톡"></a>
-                        <a href="#" class="social-link"><img src="images/icon-instagram.png" alt="인스타그램"></a>
-                        <a href="#" class="social-link"><img src="images/icon-youtube.png" alt="유튜브"></a>
-                        <a href="#" class="social-link"><img src="images/icon-blog.png" alt="블로그"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="copyright">© 2025 더부동산중개법인. All Rights Reserved.</p>
-                <ul class="policy-links">
-                    <li class="policy-item"><a href="#" class="policy-link">개인정보처리방침</a></li>
-                    <li class="policy-item"><a href="#" class="policy-link">이용약관</a></li>
-                    <li class="policy-item"><a href="#" class="policy-link">사이트맵</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
     
     
     <!-- 스크립트 -->
     <script src="js/common.js"></script>
+    
+    <!-- Header Loader Script -->
+    <script>
+        // Load header content
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Set active navigation link based on current page
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const navLinks = document.querySelectorAll('.gnb-link');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    
+    <!-- Footer Loader Script -->
+    <script>
+        // Load footer content
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
     
     <!-- 카카오맵 API -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은키값넣기"></script>
@@ -673,6 +160,37 @@
             });
             marker.setMap(map);
         }
+    </script>
+    
+    <!-- 탭 기능 스크립트 -->
+    <script>
+        // 탭 기능 구현
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            // 탭 버튼 클릭 이벤트
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // 모든 탭 버튼에서 active 클래스 제거
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // 모든 탭 패널에서 active 클래스 제거
+                    tabPanels.forEach(panel => panel.classList.remove('active'));
+                    
+                    // 클릭된 버튼에 active 클래스 추가
+                    this.classList.add('active');
+                    
+                    // 해당 탭 패널에 active 클래스 추가
+                    const targetPanel = document.getElementById(targetTab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
