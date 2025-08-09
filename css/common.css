@@ -81,6 +81,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* 페이지 전환 애니메이션 */
@@ -245,8 +247,7 @@ section:hover .section-title .small {
     background-color: rgba(0, 0, 0, 0.9); /* 항상 검정색 배경 */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* 블러 효과는 데스크톱에서만 사용 */
 }
 
 /* 스크롤 시 헤더 배경 추가 - 이미 검정색이므로 필요 없음 */
@@ -809,16 +810,29 @@ section:hover .section-title .small {
 
 /* 모든 컨테이너에 최대 너비 제한 추가 */
 .container {
-    max-width: 100%;
-    overflow-x: hidden;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    overflow-x: visible;
 }
 
 /* 이미지가 부모 요소를 넘어가지 않도록 제한 */
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+/* 크로스 브라우저 호환성 스타일 */
+.is-ie .header {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.is-ios-safari {
+    -webkit-overflow-scrolling: touch; /* iOS 스크롤 성능 개선 */
 }
 
 /* 반응형 스타일 */
@@ -844,6 +858,12 @@ img {
 }
 
 @media (max-width: 768px) {
+    .header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0.95); /* 모바일에서는 좋은 성능을 위해 블러 없이 진한 배경색 사용 */
+    }
+    
     .header-inner {
         height: 60px;
         position: relative;
@@ -875,9 +895,12 @@ img {
     
     .header-phone {
         font-size: var(--font-sm);
-        padding: var(--space-xs) var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
         border-radius: 20px;
         white-space: nowrap;
+        min-width: 120px;
+        text-align: center;
+        font-weight: 600;
     }
     
     .gnb.active .gnb-list {

@@ -1,12 +1,42 @@
 // common.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 터치 장치 지원 여부 확인
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+    
+    // 브라우저 감지 및 호환성 처리
+    const ua = navigator.userAgent.toLowerCase();
+    const isIE = ua.indexOf('msie') !== -1 || ua.indexOf('trident') !== -1;
+    const isSafari = ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    
+    // IE 일 경우 호환성 처리
+    if (isIE) {
+        document.body.classList.add('is-ie');
+        // 블러 효과 제거
+        const header = document.querySelector('.header');
+        if (header) {
+            header.style.backdropFilter = 'none';
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+        }
+    }
+    
+    // iOS Safari 호환성 처리
+    if (isIOS && isSafari) {
+        document.body.classList.add('is-ios-safari');
+    }
     // 모바일 메뉴 토글
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const gnb = document.querySelector('.gnb');
     
     // 메뉴 초기화 함수
     function setupMobileMenu() {
+        // 접근성 개선: ARIA 속성 업데이트
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
         // 드롭다운 메뉴를 위한 토글 기능 추가
         const dropdownLinks = document.querySelectorAll('.dropdown > .gnb-link');
         
@@ -44,6 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.addEventListener('click', function() {
             this.classList.toggle('active');
             gnb.classList.toggle('active');
+            
+            // 접근성 개선: ARIA 속성 업데이트
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
             
             // 모바일 메뉴 버튼 애니메이션
             const bars = this.querySelectorAll('.bar');
