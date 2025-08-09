@@ -476,15 +476,17 @@ section:hover .section-title .small {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
-    border-top: 1px solid rgba(200, 170, 110, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gnb.active .gnb-list {
     flex-direction: column;
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
 }
 
 .gnb.active .gnb-item {
@@ -498,9 +500,10 @@ section:hover .section-title .small {
 
 .gnb.active .gnb-link {
     display: block;
-    padding: var(--space-md) var(--space-lg);
+    padding: var(--space-sm) var(--space-lg);
     text-align: center;
     color: white;
+    font-size: var(--font-md);
 }
 
 .gnb.active .dropdown-menu {
@@ -811,13 +814,13 @@ section:hover .section-title .small {
 
 @media (max-width: 768px) {
     .header-inner {
-        height: 70px;
+        height: 60px;
         position: relative;
-        padding: 0 var(--space-lg);
+        padding: 0 var(--space-md);
     }
     
     .logo img {
-        height: 30px;
+        height: 28px;
     }
     
     .gnb {
@@ -830,15 +833,20 @@ section:hover .section-title .small {
     
     .mobile-menu-btn {
         display: flex;
+        margin-left: var(--space-md);
     }
     
     .mobile-menu-btn .bar {
         background-color: white;
+        height: 2px;
+        width: 22px;
     }
     
     .header-phone {
         font-size: var(--font-sm);
-        padding: var(--space-xs) var(--space-md);
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: 20px;
+        white-space: nowrap;
     }
     
     .gnb.active .gnb-list {
@@ -855,8 +863,22 @@ section:hover .section-title .small {
     
     .footer-column {
         width: 100%;
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-lg);
         padding: 0;
+    }
+    
+    .footer-column-title {
+        font-size: var(--font-md);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .footer-info-item {
+        margin-bottom: var(--space-xs);
+    }
+    
+    .footer-info-label,
+    .footer-info-text {
+        font-size: calc(var(--font-sm) - 1px);
     }
     
     .footer-social {
