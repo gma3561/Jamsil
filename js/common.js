@@ -197,15 +197,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 새로운 스크롤 애니메이션
     function handleScrollAnimations() {
+        // 모바일에서 애니메이션 최적화
+        const isMobile = window.innerWidth <= 768;
         const elements = document.querySelectorAll('.animate-on-scroll');
-        const triggerPosition = window.innerHeight * 0.85;
+        const triggerPosition = window.innerHeight * (isMobile ? 0.9 : 0.85);
         
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            
-            if (elementTop < triggerPosition) {
-                element.classList.add('visible');
-            }
+        // 성능 최적화를 위한 requestAnimationFrame 사용
+        requestAnimationFrame(() => {
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerPosition) {
+                    // 모바일에서는 지연없이 즉시 표시
+                    if (isMobile && !element.classList.contains('visible')) {
+                        element.style.transitionDelay = '0s';
+                    }
+                    element.classList.add('visible');
+                }
+            });
         });
     }
     

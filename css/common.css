@@ -64,6 +64,8 @@ html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent; /* 모바일에서 클릭시 하이라이트 색상 제거 */
+    height: 100%;
 }
 
 body {
@@ -83,6 +85,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
 }
 
 /* 페이지 전환 애니메이션 */
@@ -91,8 +94,16 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* 기본 애니메이션 설정 */
 section {
     animation: fadeIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 모바일에서 애니메이션 최적화 */
+@media (max-width: 768px) {
+    section {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
 }
 
 /* 스크롤 애니메이션 */
@@ -108,6 +119,13 @@ section {
     transform: translateY(0);
 }
 
+/* 모바일에서 스크롤 애니메이션 최적화 */
+@media (max-width: 768px) {
+    .animate-on-scroll {
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -121,6 +139,14 @@ section {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
+    will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: var(--space-xl) 0;
+    }
 }
 
 /* 타이틀 스타일 */
