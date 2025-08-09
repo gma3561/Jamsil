@@ -230,7 +230,8 @@
     color: var(--text-color);
     letter-spacing: -0.01em;
     word-break: keep-all;
-    text-align: justify;
+    text-align: left;
+    word-spacing: normal;
 }
 
 .message-highlight {
@@ -598,6 +599,20 @@
 @media (max-width: 768px) {
     .page-title {
         padding: 100px 0 40px;
+    }
+    
+    /* CEO 메시지 모바일 최적화 */
+    .ceo-content {
+        padding: var(--space-lg) var(--space-lg);
+    }
+    
+    .message-body p {
+        text-align: left;
+        word-spacing: normal;
+        word-break: keep-all;
+        letter-spacing: -0.01em;
+        white-space: normal;
+        font-size: calc(var(--font-md) - 1px);
     }
     
     .page-title .title {
