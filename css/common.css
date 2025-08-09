@@ -96,27 +96,27 @@ body {
 
 /* 기본 애니메이션 설정 */
 section {
-    animation: fadeIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    /* 모바일에서는 애니메이션 제거 */
+    animation: none;
 }
 
 /* 모바일에서 애니메이션 최적화 */
 @media (max-width: 768px) {
     section {
-        animation: fadeIn 0.5s ease-out forwards;
+        animation: none;
     }
 }
 
 /* 스크롤 애니메이션 */
 .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1; /* 애니메이션 제거 */
+    transform: none;
+    transition: none;
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* 모바일에서 스크롤 애니메이션 최적화 */
@@ -145,7 +145,12 @@ section {
 
 @media (max-width: 768px) {
     section {
-        padding: var(--space-xl) 0;
+        padding: var(--space-lg) 0; /* 모바일에서는 패딩 줄임 */
+    }
+    
+    /* 섹션 사이의 간격 줄임 */
+    section + section {
+        margin-top: -10px;
     }
 }
 
@@ -479,18 +484,23 @@ section:hover .section-title .small {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    width: 28px;
+    height: 22px;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    position: relative;
 }
 
 .mobile-menu-btn .bar {
     width: 100%;
     height: 2px;
-    background-color: var(--text-color);
+    background-color: white;
     transition: all 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .mobile-menu-btn.active .bar:nth-child(1) {
@@ -911,6 +921,10 @@ img {
     .mobile-menu-btn {
         display: flex;
         margin-left: var(--space-md);
+        position: absolute;
+        right: var(--space-md);
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     .mobile-menu-btn .bar {
