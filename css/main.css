@@ -696,32 +696,47 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        margin-top: -70px;
-        padding-top: 70px;
+        margin-top: -60px;
+        padding-top: 60px;
         min-height: 100vh; /* 전체 화면 높이로 설정 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-content {
         transform: scale(1);
         padding: 0 var(--space-md);
-        margin-top: 20vh; /* 상단에서 20% 위치에 배치 */
+        margin-top: 10vh; /* 상단에서 위치 조정 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
     }
     
     .main-logo {
-        max-width: 280px; /* 모바일에서 로고 크기 줄이기 */
+        max-width: 260px; /* 모바일에서 로고 크기 조정 */
+        margin: 0 auto var(--space-md);
     }
     
     .hero-subtitle {
         font-size: var(--font-md);
-        margin-bottom: var(--space-sm);
+        margin-bottom: var(--space-md);
         transform: translateY(0);
+        padding: 0 var(--space-md);
+        line-height: 1.5;
     }
     
     .hero-subtitle-large {
         font-size: var(--font-xl);
         letter-spacing: 0.03em;
         line-height: 1.4;
-        padding-bottom: var(--space-lg);
+        padding: 0 var(--space-md) var(--space-lg);
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
     
     .hero-cta-buttons {
@@ -756,21 +771,34 @@
 
     .info-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
+        gap: var(--space-lg);
+        padding: var(--space-md) var(--space-md);
     }
     
     .info-item {
-        padding: var(--space-sm);
+        padding: var(--space-md);
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     .black-info-section {
-        padding: var(--space-md) 0;
+        padding: var(--space-xl) 0;
+    }
+    
+    .info-title {
+        font-size: calc(var(--font-sm) + 1px);
+        margin-bottom: var(--space-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.8);
     }
     
     .info-text {
-        font-size: var(--font-md);
+        font-size: var(--font-lg);
         line-height: 1.4;
+        font-weight: 500;
     }
     
     .info-text {
