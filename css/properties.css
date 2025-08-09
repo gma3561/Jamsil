@@ -3,8 +3,18 @@
 /* 탭 시스템 스타일 */
 .tabs-section {
     background-color: var(--bg-white);
-    padding: var(--space-4xl) 0;
+    padding: var(--space-xl) 0 var(--space-4xl);
     border-bottom: 1px solid var(--border-light);
+}
+
+.tab-main-title {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    font-family: var(--font-korean);
+    font-weight: 500;
+    font-size: var(--font-lg);
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 .tabs-container {
@@ -16,7 +26,8 @@
     display: flex;
     justify-content: center;
     gap: var(--space-md);
-    margin-bottom: var(--space-4xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-3xl);
     flex-wrap: wrap;
     padding: 0 var(--space-lg);
 }
@@ -26,13 +37,13 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-xs);
-    padding: var(--space-xl) var(--space-2xl);
+    padding: var(--space-md) var(--space-xl);
     background-color: var(--bg-light);
     border: 2px solid transparent;
-    border-radius: 16px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-width: 200px;
+    min-width: 150px;
     font-family: var(--font-korean);
     box-shadow: var(--shadow-sm);
 }
@@ -61,6 +72,7 @@
 .tabs-content {
     position: relative;
     min-height: 600px;
+    overflow: visible;
 }
 
 .tab-panel {
@@ -72,6 +84,7 @@
     display: block;
     padding: var(--space-2xl) var(--space-xl);
     margin-bottom: var(--space-3xl);
+    overflow: visible;
 }
 
 @keyframes fadeIn {
@@ -86,8 +99,12 @@
 }
 
 .tab-image {
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 600px; /* 이미지 높이 고정 */
 }
 
 .tab-image:hover {
@@ -97,8 +114,10 @@
 .tab-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* 이미지 비율 유지하며 채우기 */
     display: block;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .tab-info {
@@ -149,8 +168,9 @@
 .page-title {
     background-color: var(--secondary-color);
     color: var(--bg-white);
-    padding: 120px 0 60px;
+    padding: 60px 0;
     text-align: center;
+    margin-top: 80px; /* 헤더 높이를 고려한 마진 추가 */
 }
 
 .page-title .title {

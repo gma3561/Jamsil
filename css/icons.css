@@ -1,0 +1,166 @@
+/* icons.css - Custom icon styles using pseudo-elements instead of emojis */
+
+/* Common icon styles */
+[class^="icon-"] {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    font-style: normal;
+    vertical-align: middle;
+}
+
+/* Phone icon */
+.icon-phone::before {
+    content: '';
+    position: absolute;
+    width: 0.9em;
+    height: 0.9em;
+    border: 2px solid currentColor;
+    border-radius: 0.1em;
+    top: 0.05em;
+    left: 0.05em;
+}
+
+.icon-phone::after {
+    content: '';
+    position: absolute;
+    width: 0.35em;
+    height: 0.35em;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid currentColor;
+    bottom: 0.18em;
+    left: 0.325em;
+}
+
+/* Location/map pin icon */
+.icon-location {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-location::before {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50% 50% 50% 0;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 0.1em;
+}
+
+.icon-location::after {
+    content: '';
+    position: absolute;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    background: #fff;
+    top: 0.25em;
+    left: 0.35em;
+}
+
+/* Building icon */
+.icon-building {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-building::before {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    border: 2px solid currentColor;
+    top: 0.1em;
+    left: 0.1em;
+}
+
+.icon-building::after {
+    content: '';
+    position: absolute;
+    width: 0.4em;
+    height: 0.3em;
+    background: currentColor;
+    bottom: 0.1em;
+    left: 0.3em;
+}
+
+/* Floor plan icon */
+.icon-floor-plan {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-floor-plan::before {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    border: 2px solid currentColor;
+    top: 0.1em;
+    left: 0.1em;
+}
+
+.icon-floor-plan::after {
+    content: '';
+    position: absolute;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    top: 0.3em;
+    left: 0.1em;
+}
+
+/* Calendar icon */
+.icon-calendar {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-calendar::before {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 0.7em;
+    border: 2px solid currentColor;
+    border-radius: 0.1em;
+    top: 0.2em;
+    left: 0.1em;
+}
+
+.icon-calendar::after {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 0.15em;
+    background: currentColor;
+    top: 0.35em;
+    left: 0.1em;
+}
+
+/* Apply custom styling for each icon context */
+.info-icon .icon-location,
+.info-icon .icon-building,
+.info-icon .icon-floor-plan,
+.info-icon .icon-calendar {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.header-phone .icon-phone {
+    font-size: 16px;
+    margin-right: 5px;
+}
