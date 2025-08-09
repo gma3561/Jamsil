@@ -1,0 +1,256 @@
+/* luxury-icons.css - Elegant icon system for premium real estate */
+
+/* Icon container styles */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+/* Common luxury icon base */
+.luxury-icon {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+/* Icon circle background */
+.luxury-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(184, 164, 126, 0.12), rgba(184, 164, 126, 0.05));
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(184, 164, 126, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Location icon */
+.luxury-icon.location::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    border-radius: 50% 50% 50% 0;
+    transform-origin: center;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    box-shadow: 0 2px 6px rgba(184, 153, 107, 0.3);
+}
+
+.luxury-icon.location .pin-circle {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Building icon */
+.luxury-icon.building::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 32px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 6px rgba(184, 153, 107, 0.2);
+}
+
+.luxury-icon.building .window-1 {
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+}
+
+.luxury-icon.building .window-2 {
+    position: absolute;
+    top: 35%;
+    left: 57%;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+}
+
+.luxury-icon.building .window-3 {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+}
+
+.luxury-icon.building .window-4 {
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+}
+
+/* Floor plan icon */
+.luxury-icon.floor-plan::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 6px rgba(184, 153, 107, 0.2);
+}
+
+.luxury-icon.floor-plan .line-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    width: 20px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.luxury-icon.floor-plan .line-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-8px, -50%);
+    width: 2px;
+    height: 20px;
+    background: var(--primary-color);
+}
+
+/* Calendar icon */
+.luxury-icon.calendar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 28px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(184, 153, 107, 0.2);
+}
+
+.luxury-icon.calendar .cal-line {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.luxury-icon.calendar .cal-knob-1 {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 2px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 1px;
+}
+
+.luxury-icon.calendar .cal-knob-2 {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 2px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 1px;
+}
+
+/* Phone icon */
+.luxury-icon.phone {
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.luxury-icon.phone::before {
+    width: 24px;
+    height: 24px;
+}
+
+.luxury-icon.phone::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.luxury-icon.phone .phone-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 1px;
+    background: var(--primary-color);
+}
+
+/* For small/mini icons */
+.luxury-icon.mini {
+    width: 24px;
+    height: 24px;
+}
+
+.luxury-icon.mini::before {
+    width: 20px;
+    height: 20px;
+}
+
+/* Animation effects */
+.luxury-icon:hover::before {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(200, 170, 110, 0.5);
+}
+
+/* Additional custom styling for header phone icon */
+.header-phone .luxury-icon.phone {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}

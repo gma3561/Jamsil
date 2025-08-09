@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>잠실 래미안 아이파크 분양 | 2025년 12월 입주 | 더부동산중개법인</title>
+    <title>잠실 래미안 아이파크 | 2025년 12월 입주 | 더부동산중개법인</title>
     <meta name="description" content="삼성C&T 래미안과 HDC 아이파크의 만남. 몽촌토성역 139m, 잠실 프리미엄 분양 단지">
     <meta name="keywords" content="잠실 래미안 아이파크, 몽촌토성역, 잠실동 분양, 래미안, 아이파크, 프리미엄 아파트">
     <meta property="og:title" content="잠실 래미안 아이파크 분양 | 몽촌토성역 139m">
@@ -15,332 +15,196 @@
     <!-- 파비콘 -->
     <link rel="icon" href="./images/favicon.ico">
     
-    <!-- 폰트 -->
+    <!-- 최적화된 폰트 로딩 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <!-- 한글 폰트 - Pretendard -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- 고급스러운 한글 폰트 - Noto Serif Korean -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- 한글 폰트 - SUIT (최적화) -->
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    
+    <!-- 폰트 로딩 전략 -->
+    <style>
+      /* 폰트 로딩 처리 */
+      @font-face {
+        font-family: 'SUIT';
+        font-display: swap; /* 폰트 로딩 중 텍스트 표시 전략 개선 */
+      }
+    </style>
     
     <!-- CSS 파일 -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/luxury-icons.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- 스킵 네비게이션 -->
     <a href="#main" class="skip-nav">본문 바로가기</a>
     <!-- 헤더 영역 -->
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img src="./images/logo.png" alt="더부동산중개법인">
-                </a>
-            </h1>
-            
-            <nav class="gnb">
-                <ul class="gnb-list">
-                    <li class="gnb-item"><a href="index.html" class="gnb-link active">잠실 래미안 아이파크</a></li>
-                    <li class="gnb-item"><a href="about.html" class="gnb-link">사업 정보</a></li>
-                    <li class="gnb-item"><a href="properties.html" class="gnb-link">단지 정보</a></li>
-                    <li class="gnb-item"><a href="special.html" class="gnb-link">평면 정보</a></li>
-                    <li class="gnb-item"><a href="news.html" class="gnb-link">관심고객 등록</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-contact">
-                <a href="tel:02-2135-1367" class="header-phone">02-2135-1367</a>
-            </div>
-            
-            <button type="button" class="mobile-menu-btn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </header>
+    <div id="header-container"></div>
     
     <!-- 메인 영역 -->
     <main class="main" id="main">
-        <!-- 메인 비주얼 (비디오 배경) -->
-        <section class="main-visual">
-            <div class="video-background">
-                <video autoplay muted loop id="main-video">
-                    <source src="https://drive.google.com/uc?export=download&id=1DicAn7ikKcZAex0oJMW58OMsRJqBtWPR" type="video/mp4">
-                    <!-- 구글 드라이브 직접 스트리밍이 안 될 경우 iframe 대체 -->
-                    귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
-                </video>
-                <!-- 백업용 iframe (video 태그가 작동하지 않을 경우) -->
-                <iframe 
-                    src="https://drive.google.com/file/d/1DicAn7ikKcZAex0oJMW58OMsRJqBtWPR/preview" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: none;"
-                    id="backup-video"
-                    allow="autoplay">
-                </iframe>
+        <!-- 메인 히어로 섹션 -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="./images/jam-main.png" 
+                     alt="잠실 래미안 아이파크 나이트 스카이라인" 
+                     class="hero-image"
+                     loading="eager"
+                     decoding="async">
             </div>
-            <div class="main-visual-inner">
-                <div class="main-visual-content">
-                    <h2 class="main-title">
-                        삼성C&T 래미안과 HDC 아이파크의 만남<br><span class="highlight">잠실 래미안 아이파크</span>
-                    </h2>
-                    <p class="main-desc">
-                        몽촌토성역 139m | 2,678세대 대단지 | 2025년 12월 입주
-                    </p>
-                    <div class="main-btn-group">
-                        <a href="register.html" class="main-btn primary">분양 문의하기</a>
-                        <a href="properties.html" class="main-btn secondary">단지정보 보기</a>
+            <div class="hero-content">
+                <div class="hero-main-content">
+                    <h1 class="hero-title"></h1>
+                    <p class="hero-subtitle">래미안 아이파크가 펼치는 잠실의 새로운 미래</p>
+                    <p class="hero-subtitle-large">잠실 래미안 아이파크</p>
+<!-- 로고 제거 -->
+                </div>
+                <!-- 버튼 제거 -->
+                <div class="hero-cta-buttons" style="display: none;">
+                </div>
+            </div>
+        </section>
+        <!-- 블랙 정보 섹션 -->
+        <section class="black-info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3 class="info-title">단지명</h3>
+                        <p class="info-text">잠실 래미안 아이파크</p>
+                    </div>
+                    <div class="info-item">
+                        <h3 class="info-title">위치</h3>
+                        <p class="info-text">서울특별시 송파구 신천동 20-4번지</p>
+                    </div>
+                    <div class="info-item">
+                        <h3 class="info-title">상담 문의</h3>
+                        <p class="info-text"><a href="tel:02-2135-1367" class="tel-link">02-2135-1367</a></p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- 서비스 소개 -->
-        <section class="service">
+        <!-- 페이지 타이틀 -->
+        <section class="page-title" id="project-info">
             <div class="container">
-                <h2 class="section-title">
-                    <span class="small">Premium Life</span>
-                    <span class="highlight">잠실 래미안 아이파크</span>의 특별함
-                </h2>
-                
-                <ul class="service-list">
-                    <li class="service-item">
-                        <div class="service-icon">
-                            <img src="./images/icon-apartment.png" alt="프리미엄 브랜드">
-                        </div>
-                        <h3 class="service-title">프리미엄 브랜드</h3>
-                        <p class="service-desc">삼성C&T 래미안과 HDC 아이파크의 브랜드 가치</p>
-                    </li>
-                    <li class="service-item">
-                        <div class="service-icon">
-                            <img src="./images/icon-office.png" alt="교통 입지">
-                        </div>
-                        <h3 class="service-title">최고의 교통</h3>
-                        <p class="service-desc">8호선 몽촌토성역 139m, 롯데월드타워 도보 6분</p>
-                    </li>
-                    <li class="service-item">
-                        <div class="service-icon">
-                            <img src="./images/icon-house.png" alt="대단지">
-                        </div>
-                        <h3 class="service-title">대단지 규모</h3>
-                        <p class="service-desc">2,678세대 23개동 지하 5층~지상 35층</p>
-                    </li>
-                    <li class="service-item">
-                        <div class="service-icon">
-                            <img src="./images/icon-commercial.png" alt="입주시기">
-                        </div>
-                        <h3 class="service-title">빠른 입주</h3>
-                        <p class="service-desc">2025년 12월 입주 예정</p>
-                    </li>
-                </ul>
+                <h2 class="title">사업 정보</h2>
+                <p class="subtitle">잠실 래미안 아이파크 사업 정보</p>
             </div>
         </section>
         
-        <!-- 추천 매물 -->
-        <section class="featured">
+        <!-- 회사 소개 -->
+        <section class="about-intro">
             <div class="container">
-                <h2 class="section-title">
-                    <span class="small">Floor Types</span>
-                    <span class="highlight">분양 타입</span>을 소개합니다
-                </h2>
-                
-                <ul class="property-list">
-                    <li class="property-item">
-                        <a href="special.html#type-43" class="property-link">
-                            <div class="property-thumb">
-                                <img src="./images/floor-43.jpg" alt="43㎡ 타입">
-                                <span class="property-badge">분양</span>
-                            </div>
-                            <div class="property-info">
-                                <h3 class="property-title">43㎡ (13평형)</h3>
-                                <p class="property-price">11억~13억원</p>
-                                <p class="property-meta">1룸 | 1화장실 | 13평</p>
-                                <p class="property-address">송파구 신천동 20-4번지</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="property-item">
-                        <a href="special.html#type-74" class="property-link">
-                            <div class="property-thumb">
-                                <img src="./images/floor-74.jpg" alt="74㎡ 타입">
-                                <span class="property-badge">분양</span>
-                            </div>
-                            <div class="property-info">
-                                <h3 class="property-title">74㎡ (22평형)</h3>
-                                <p class="property-price">16억~18억원</p>
-                                <p class="property-meta">3룸 | 2화장실 | 22평</p>
-                                <p class="property-address">송파구 신천동 20-4번지</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="property-item">
-                        <a href="special.html#type-104" class="property-link">
-                            <div class="property-thumb">
-                                <img src="./images/floor-104.jpg" alt="104㎡ 타입">
-                                <span class="property-badge">분양</span>
-                            </div>
-                            <div class="property-info">
-                                <h3 class="property-title">104㎡ (31평형)</h3>
-                                <p class="property-price">20억~22억원</p>
-                                <p class="property-meta">4룸 | 2화장실 | 31평</p>
-                                <p class="property-address">송파구 신천동 20-4번지</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div class="btn-center">
-                    <a href="special.html" class="more-btn">평면정보 더보기</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 부동산 정보 -->
-        <section class="news">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="small">Project News</span>
-                    <span class="highlight">단지 소식</span>
-                </h2>
-                
-                <ul class="news-list">
-                    <li class="news-item">
-                        <a href="news-detail.html" class="news-link">
-                            <div class="news-thumb">
-                                <img src="./images/news-sample1.jpg" alt="부동산 뉴스">
-                            </div>
-                            <div class="news-info">
-                                <h3 class="news-title">잠실 래미안 아이파크 분양 일정 확정</h3>
-                                <p class="news-desc">삼성C&T와 HDC의 협업으로 탄생하는 잠실 래미안 아이파크, 2025년 12월 입주 예정으로 분양 진행 중입니다.</p>
-                                <p class="news-date">2025.07.20</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news-item">
-                        <a href="news-detail.html" class="news-link">
-                            <div class="news-thumb">
-                                <img src="./images/news-sample2.jpg" alt="부동산 뉴스">
-                            </div>
-                            <div class="news-info">
-                                <h3 class="news-title">몽촌토성역 인근 인프라 확장 계획</h3>
-                                <p class="news-desc">8호선 몽촌토성역 주변 개발이 가속화되면서 교통 및 상업시설 인프라가 크게 확장될 예정입니다.</p>
-                                <p class="news-date">2025.07.18</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div class="btn-center">
-                    <a href="register.html" class="more-btn">분양 문의하기</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 문의하기 -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2 class="contact-title">
-                            잠실 래미안 아이파크<br>
-                            <span class="highlight">분양 문의</span>하세요
-                        </h2>
-                        <p class="contact-desc">
-                            프리미엄 분양 정보와 전문 상담을<br>
-                            제공해드립니다.
-                        </p>
-                        <ul class="contact-list">
-                            <li class="contact-item">
-                                <span class="contact-label">전화</span>
-                                <a href="tel:02-2135-1367" class="contact-link">02-2135-1367</a>
-                            </li>
-                            <li class="contact-item">
-                                <span class="contact-label">이메일</span>
-                                <a href="mailto:jenny@the-realty.co.kr" class="contact-link">jenny@the-realty.co.kr</a>
-                            </li>
-                            <li class="contact-item">
-                                <span class="contact-label">주소</span>
-                                <p class="contact-text">서울특별시 강남구 테헤란로87길 39 (삼성동, 심스빌딩)</p>
-                            </li>
+                <h3 class="section-title" style="grid-column: 1 / -1; margin-bottom: var(--space-3xl);">
+                    <span class="small">The Property</span>
+                    <span class="title-text">잠실 래미안 아이파크 사업개요</span>
+                </h3>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h4 class="about-subtitle">잠실 래미안 아이파크</h4>
+                        <p>잠실 래미안 아이파크는 삼성C&T와 HDC의 협업으로 태어난 프리미엄 주거단지입니다. 한강변에 위치한 이 단지는 쾌적한 환경과 우수한 접근성을 자랑합니다.</p>
+                        
+                        <h4 class="about-subtitle">입지 우수성</h4>
+                        <ul class="about-list">
+                            <li>업무지구 접근성: 올림픽로를 통한 테헤란로 등 강남 주요 업무지구 연결</li>
+                            <li>주요 간선도로: 올림픽대로 및 동부간선도로 진출입 용이</li>
+                        </ul>
+                        
+                        <h4 class="about-subtitle">시장 가치</h4>
+                        <ul class="about-list">
+                            <li>2005년 이후 약 20년 만에 잠실권역에 공급되는 브랜드 대단지</li>
+                            <li>우수한 입지와 편의성으로 높은 관심 집중</li>
+                            <li>미래가치 상승이 기대되는 핵심 입지</li>
                         </ul>
                     </div>
-                    
-                    <div class="contact-form">
-                        <h3 class="form-title">상담 문의</h3>
-                        <form id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">이름</label>
-                                    <input type="text" id="name" name="name" class="form-input" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">연락처</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">이메일</label>
-                                <input type="email" id="email" name="email" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject" class="form-label">문의 유형</label>
-                                <select id="subject" name="subject" class="form-select">
-                                    <option value="">문의 유형을 선택하세요</option>
-                                    <option value="43㎡ 타입 문의">43㎡ (13평형) 문의</option>
-                                    <option value="74㎡ 타입 문의">74㎡ (22평형) 문의</option>
-                                    <option value="104㎡ 타입 문의">104㎡ (31평형) 문의</option>
-                                    <option value="분양 일정 문의">분양 일정 문의</option>
-                                    <option value="기타 문의">기타 문의</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">문의 내용</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                            </div>
-                            <div class="form-group form-privacy">
-                                <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
-                                <label for="privacy" class="checkbox-label">개인정보 수집 및 이용에 동의합니다.</label>
-                            </div>
-                            <div class="form-submit">
-                                <button type="submit" class="submit-btn">문의하기</button>
-                            </div>
-                        </form>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <p class="placeholder-text">사업 정보와 관련된 사진을 추가해주세요.<br>(권장 크기: 600px x 400px)</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 오시는 길 -->
-        <section class="map-section">
+        <!-- CEO 인사말 -->
+        <section class="ceo-message" id="ceo-message">
             <div class="container">
-                <h2 class="section-title">
-                    <span class="small">Location</span>
-                    <span class="highlight">오시는 길</span>
-                </h2>
+                <div class="ceo-header">
+                    <h3 class="section-title">
+                        <span class="small">CEO Message</span>
+                        <span class="title-text">대표 인사말</span>
+                    </h3>
+                </div>
                 
-                <div class="map-wrapper">
-                    <div id="map" class="map-container">
-                        <!-- 카카오맵 API가 로드될 영역 -->
+                <div class="ceo-wrapper">
+                    <div class="ceo-image">
+                        <img src="./images/ceo.jpg" alt="CEO 정연서">
                     </div>
                     
-                    <div class="map-info">
-                        <h3 class="map-title">잠실 래미안 아이파크 분양 현장</h3>
-                        <p class="map-address">서울특별시 송파구 신천동 20-4번지</p>
-                        <ul class="map-list">
-                            <li class="map-item">
-                                <span class="map-label">지하철</span>
-                                <p class="map-text">8호선 몽촌토성역 5번 출구 139m (도보 2분)</p>
-                            </li>
-                            <li class="map-item">
-                                <span class="map-label">주요시설</span>
-                                <p class="map-text">롯데월드타워 도보 6분, 석촌호수 인근</p>
-                            </li>
-                            <li class="map-item">
-                                <span class="map-label">상담 문의</span>
-                                <p class="map-text">02-2135-1367 (평일 09:00~18:00)</p>
-                            </li>
-                        </ul>
+                    <div class="ceo-content">
+                        <div class="ceo-text">
+                            <div class="message-opening">
+                                <p>안녕하세요, 더부동산중개법인 대표 정연서입니다.</p>
+                            </div>
+                            
+                            <div class="message-body">
+                                <p>부동산은 단순한 거래의 대상이 아닌 고객의 삶과 미래가 담긴 소중한 자산입니다. 더부동산중개법인은 항상 고객의 입장에서 생각하고, 고객의 가치를 최우선으로 여기며 신뢰할 수 있는 부동산 서비스를 제공하기 위해 노력하고 있습니다.</p>
+                                
+                                <p>저희는 풍부한 경험과 전문성을 바탕으로 고객 여러분의 소중한 자산을 안전하게 관리하고, 최고의 가치를 창출해 드리기 위해 최선을 다하고 있습니다. 부동산 시장의 빠른 변화에 대응하며, 고객님께 정확한 정보와 최적의 솔루션을 제공함으로써 만족스러운 부동산 거래가 이루어질 수 있도록 항상 함께하겠습니다.</p>
+                                
+                                <p class="message-highlight">더부동산중개법인은 고객 여러분의 든든한 부동산 파트너로서 언제나 최고의 서비스를 약속드립니다.</p>
+                            </div>
+                            
+                            <div class="message-closing">
+                                <p>감사합니다.</p>
+                                <div class="ceo-sign">
+                                    <span class="signature-text">더부동산중개법인 대표 정연서</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 회사 연혁 -->
+        <section class="history">
+            <div class="container">
+                <h3 class="section-title">
+                    <span class="small">Our Services</span>
+                    프리미엄 부동산 서비스
+                </h3>
+                
+                <div class="service-overview">
+                    <p>THE는 고품질 부동산 중개서비스를 제공합니다</p>
+                </div>
+                
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-content">
+                            <h4>전문성</h4>
+                            <p>풍부한 경험과 시장 이해를 바탕으로 전문적인 부동산 컨설팅을 제공합니다. 각 지역 특성과 시장 동향을 분석하여 최적의 매물을 소개해 드립니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-content">
+                            <h4>맞춤 서비스</h4>
+                            <p>고객님의 요구사항과 상황에 맞는 부동산 솔루션을 제안합니다. 개인의 라이프스타일과 투자 목표에 따른 맞춤형 서비스로 만족도를 높여드립니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-content">
+                            <h4>신뢰와 투명성</h4>
+                            <p>정확한 정보 제공과 투명한 거래 과정을 통해 신뢰를 구축합니다. 모든 과정에서 고객의 이익을 최우선으로 고려하여 안심하고 거래할 수 있는 환경을 조성합니다.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -348,116 +212,138 @@
     </main>
     
     <!-- 푸터 영역 -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="./images/logo-white.png" alt="잠실 래미안 아이파크">
-                    </div>
-                    <ul class="footer-contact">
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">상호명</span>
-                            <span class="footer-contact-text">더부동산중개법인</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">대표자</span>
-                            <span class="footer-contact-text">정연서</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">사업자등록번호</span>
-                            <span class="footer-contact-text">506-88-02125</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">중개등록번호</span>
-                            <span class="footer-contact-text">11680-2021-00454</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">주소</span>
-                            <span class="footer-contact-text">서울특별시 강남구 테헤란로87길 39 (삼성동, 심스빌딩)</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">전화</span>
-                            <span class="footer-contact-text">02-2135-1367</span>
-                        </li>
-                        <li class="footer-contact-item">
-                            <span class="footer-contact-label">이메일</span>
-                            <span class="footer-contact-text">jenny@the-realty.co.kr</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-links-title">바로가기</h3>
-                    <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">홈</a></li>
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">회사소개</a></li>
-                        <li class="footer-menu-item"><a href="properties.html" class="footer-menu-link">매물정보</a></li>
-                        <li class="footer-menu-item"><a href="special.html" class="footer-menu-link">특별분양</a></li>
-                        <li class="footer-menu-item"><a href="news.html" class="footer-menu-link">부동산뉴스</a></li>
-                        <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">문의하기</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h3 class="footer-newsletter-title">뉴스레터 구독</h3>
-                    <p class="footer-newsletter-desc">최신 부동산 소식을 받아보세요.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="이메일 주소" class="newsletter-input">
-                        <button type="submit" class="newsletter-btn">구독</button>
-                    </form>
-                    <div class="footer-social">
-                        <a href="#" class="social-link"><img src="./images/icon-kakao.png" alt="카카오톡"></a>
-                        <a href="#" class="social-link"><img src="./images/icon-instagram.png" alt="인스타그램"></a>
-                        <a href="#" class="social-link"><img src="./images/icon-youtube.png" alt="유튜브"></a>
-                        <a href="#" class="social-link"><img src="./images/icon-blog.png" alt="블로그"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="copyright">© 2025 더부동산중개법인. All Rights Reserved.</p>
-                <ul class="policy-links">
-                    <li class="policy-item"><a href="#" class="policy-link">개인정보처리방침</a></li>
-                    <li class="policy-item"><a href="#" class="policy-link">이용약관</a></li>
-                    <li class="policy-item"><a href="#" class="policy-link">사이트맵</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
     
-    <!-- 카카오 채널 상담 -->
-    <div class="kakao-chat">
-        <a href="#" class="kakao-chat-btn">
-            <img src="./images/icon-kakao-chat.png" alt="카카오톡 채널 상담">
-            <span class="kakao-chat-text">채널 상담</span>
-        </a>
-    </div>
     
     <!-- 스크립트 -->
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     
-    <!-- 카카오맵 API -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은키값넣기"></script>
+    <!-- Header Loader Script -->
     <script>
-        // 카카오맵 초기화 스크립트
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.5124, 127.1012), // 신천동 좌표
-            level: 3
-        };
-        var map = new kakao.maps.Map(container, options);
-        
-        // 마커 표시
-        var markerPosition  = new kakao.maps.LatLng(37.5124, 127.1012);
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        marker.setMap(map);
+        // Load header content
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Set active navigation link based on current page
+                setTimeout(() => {
+                    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                    const currentHash = window.location.hash;
+                    const navLinks = document.querySelectorAll('.gnb-link');
+                    
+                    navLinks.forEach(link => {
+                        const linkHref = link.getAttribute('href');
+                        // Check if it's current page
+                        if (linkHref === currentPage || 
+                            (currentPage === 'index.html' && linkHref === 'index.html' && !currentHash)) {
+                            link.classList.add('active');
+                        }
+                        // Check if it's current hash on current page
+                        else if (currentHash && linkHref === currentPage + currentHash) {
+                            link.classList.add('active');
+                        }
+                    });
+                    
+                    // Add scroll event listener for sections within the page
+                    if (currentPage === 'index.html') {
+                        window.addEventListener('scroll', updateActiveLink);
+                    }
+                }, 100);
+            })
+            .catch(error => console.error('Error loading header:', error));
+            
+        // Update active link based on scroll position
+        function updateActiveLink() {
+            const sections = [
+                { id: '', selector: '.hero-section' },
+                { id: 'project-info', selector: '#project-info' },
+                { id: 'ceo-message', selector: '#ceo-message' }
+            ];
+            
+            let currentSectionId = '';
+            const scrollPosition = window.scrollY + 100; // Add offset for header
+            
+            // Find current section
+            sections.forEach(section => {
+                const element = document.querySelector(section.selector);
+                if (element && element.offsetTop <= scrollPosition && 
+                    element.offsetTop + element.offsetHeight > scrollPosition) {
+                    currentSectionId = section.id;
+                }
+            });
+            
+            // Update active link
+            const navLinks = document.querySelectorAll('.gnb-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkHash = link.getAttribute('href').split('#')[1] || '';
+                if ((currentSectionId === '' && link.getAttribute('href') === 'index.html') ||
+                    linkHash === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
     </script>
+    
+    <!-- Footer Loader Script -->
+    <script>
+        // Load footer content with cache busting
+        console.log('Loading footer...');
+        
+        // Add temporary loading indicator
+        const footerContainer = document.getElementById('footer-container');
+        if (footerContainer) {
+            footerContainer.innerHTML = '<div style="padding: 20px; text-align: center; background: #f0f0f0;">Loading footer...</div>';
+        }
+        
+        function loadFooter() {
+            fetch('./footer.html?t=' + Date.now())
+                .then(response => {
+                    console.log('Footer response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error('Footer response not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Footer data loaded, length:', data.length);
+                    const footerContainer = document.getElementById('footer-container');
+                    if (footerContainer) {
+                        footerContainer.innerHTML = data;
+                        console.log('Footer loaded successfully');
+                    } else {
+                        console.error('Footer container not found');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                    // Fallback: create a simple footer
+                    const footerContainer = document.getElementById('footer-container');
+                    if (footerContainer) {
+                        footerContainer.innerHTML = `
+                            <footer class="footer">
+                                <div class="footer-bottom">
+                                    <div class="container">
+                                        <p class="copyright">© 2025 더부동산중개법인. All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                            </footer>
+                        `;
+                        console.log('Fallback footer created');
+                    }
+                });
+        }
+        
+        // Load footer when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadFooter);
+        } else {
+            loadFooter();
+        }
+    </script>
+    
+    <!-- 카카오맵 API - 지도 제거로 인한 스크립트 제거 -->
     
     <!-- 채널톡 연동 스크립트 -->
     <script>
@@ -495,7 +381,11 @@
         })();
         
         ChannelIO('boot', {
-            "pluginKey": "6c361437-0a03-488c-9dc5-66c38f13e4c1"
+            "pluginKey": "6c361437-0a03-488c-9dc5-66c38f13e4c1",
+            "customLauncherSelector": ".custom-channel-button",
+            "hideChannelButtonOnBoot": false,
+            "zIndex": 9999,
+            "mobilePosition": "top"
         });
     </script>
     
@@ -505,7 +395,7 @@
         "@context": "https://schema.org",
         "@type": "RealEstateListing",
         "name": "잠실 래미안 아이파크",
-        "description": "삼성C&T 래미안과 HDC 아이파크의 만남. 몽촌토성역 139m, 2,678세대 대단지",
+        "description": "삼성C&T 래미안과 HDC 아이파크의 만남. 몽촌토성역 프리미엄 단지",
         "url": "https://gma3561.github.io/Jamsil/",
         "address": {
             "@type": "PostalAddress",
@@ -520,15 +410,6 @@
             "latitude": 37.5124,
             "longitude": 127.1012
         },
-        "numberOfRooms": "1-4실",
-        "floorSize": {
-            "@type": "QuantitativeValue",
-            "minValue": 43,
-            "maxValue": 104,
-            "unitCode": "MTK"
-        },
-        "priceRange": "11억원 - 22억원",
-        "availabilityStarts": "2025-12-01",
         "realEstateAgent": {
             "@type": "RealEstateAgent",
             "name": "더부동산중개법인",

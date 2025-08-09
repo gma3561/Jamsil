@@ -1,26 +1,17 @@
 // main.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 구글 드라이브 비디오 로딩 체크 및 백업 처리
+    // 유튜브 비디오 자동재생 최적화
     const mainVideo = document.getElementById('main-video');
-    const backupVideo = document.getElementById('backup-video');
     
-    if (mainVideo && backupVideo) {
-        // 비디오 로딩 실패시 iframe 백업 사용
-        mainVideo.addEventListener('error', function() {
-            console.log('Main video failed, switching to backup iframe');
-            mainVideo.style.display = 'none';
-            backupVideo.style.display = 'block';
-        });
-        
-        // 비디오 로딩 시간 체크 (5초 후에도 로딩 안되면 백업 사용)
-        setTimeout(function() {
-            if (mainVideo.readyState === 0) {
-                console.log('Video loading timeout, switching to backup iframe');
-                mainVideo.style.display = 'none';
-                backupVideo.style.display = 'block';
-            }
-        }, 5000);
+    if (mainVideo) {
+        // 페이지 로드 후 비디오가 잘 재생되도록 처리
+        setTimeout(() => {
+            // iframe 새로고침으로 자동재생 확실히 실행
+            const src = mainVideo.src;
+            mainVideo.src = '';
+            mainVideo.src = src;
+        }, 1000);
     }
     
     // 메인 비주얼 패럴랙스 효과
@@ -101,38 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         counters.forEach(counter => {
             observer.observe(counter);
-        });
-    }
-    
-    // 모바일에서 매물 아이템 터치 시 호버 효과
-    const propertyItems = document.querySelectorAll('.property-item');
-    
-    if(propertyItems.length > 0 && 'ontouchstart' in window) {
-        propertyItems.forEach(item => {
-            item.addEventListener('touchstart', function() {
-                this.classList.add('touch-hover');
-            }, { passive: true });
-            
-            item.addEventListener('touchend', function() {
-                setTimeout(() => {
-                    this.classList.remove('touch-hover');
-                }, 300);
-            }, { passive: true });
-        });
-    }
-    
-    // 문의 폼 입력 필드 포커스 효과
-    const formInputs = document.querySelectorAll('.form-input, .form-textarea, .form-select');
-    
-    if(formInputs.length > 0) {
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.classList.remove('focused');
-            });
         });
     }
 });
