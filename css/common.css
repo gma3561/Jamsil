@@ -116,6 +116,9 @@ section {
 /* 섹션 공통 스타일 */
 section {
     padding: var(--space-xxl) 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* 타이틀 스타일 */
@@ -808,6 +811,8 @@ section:hover .section-title .small {
 .container {
     max-width: 100%;
     overflow-x: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* 이미지가 부모 요소를 넘어가지 않도록 제한 */

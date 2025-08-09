@@ -772,7 +772,9 @@
     .info-grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
-        padding: var(--space-md) var(--space-md);
+        padding: var(--space-lg) var(--space-md);
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     .info-item {
@@ -781,6 +783,8 @@
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin: 0 auto;
     }
     
     .black-info-section {
