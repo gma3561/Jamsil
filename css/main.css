@@ -12,6 +12,8 @@
     margin-top: -80px; /* 상단바 공간 보정 */
     padding-top: 80px; /* 상단바 공간 보정 */
     margin-bottom: 0; /* 검정 박스와 경계선 없이 연결 */
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero-background {

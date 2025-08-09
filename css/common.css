@@ -62,6 +62,8 @@
 /* 기본 스타일 */
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -71,10 +73,14 @@ body {
     line-height: 1.7;
     word-break: keep-all;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
     font-weight: 400;
     letter-spacing: -0.02em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 }
 
 /* 페이지 전환 애니메이션 */
@@ -789,6 +795,22 @@ section:hover .section-title .small {
     color: var(--primary-color);
 }
 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 모든 컨테이너에 최대 너비 제한 추가 */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* 이미지가 부모 요소를 넘어가지 않도록 제한 */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* 반응형 스타일 */
 @media (max-width: 1200px) {
