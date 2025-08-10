@@ -37,7 +37,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* 필터 더 강하게 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.7) 100%); /* 그라디언트 추가 */
     z-index: 1;
 }
 
@@ -128,9 +128,9 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 120px; /* 포인트 선 길이 축소 */
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -722,20 +722,20 @@
     }
     
     .hero-image {
-        height: 100vh; /* 모바일에서 이미지 높이 확대 */
-        object-position: center center; /* 이미지 포지션 조정 */
+        height: 100vh; 
+        object-position: center center;
         min-height: 100%;
         max-height: none;
         width: 100%;
         object-fit: cover;
-        opacity: 0.85; /* 이미지 투명도 조정 */
-        filter: brightness(0.9) contrast(1.1); /* 필터 조정 */
+        opacity: 0.9; /* 투명도 조정 */
+        filter: brightness(0.9) contrast(1.05); /* 필터 조정 */
     }
     
     .hero-content {
-        transform: none; /* 크기 조정 제거 */
-        padding: 20px;
-        margin-top: 0; /* 위치 조정 */
+        transform: none;
+        padding: 30px 0;
+        margin-top: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -743,9 +743,9 @@
         text-align: center;
         width: 100%;
         position: absolute;
-        bottom: 25%; /* 하단 배치로 변경 */
-        background-color: rgba(0, 0, 0, 0.6); /* 배경 더 진하게 */
-        padding: 30px 0; /* 패딩 증가 */
+        bottom: 20%; /* 더 아래로 이동 */
+        background-color: rgba(0, 0, 0, 0.65); /* 배경 더 진하게 */
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3); /* 상단 그림자 추가 */
     }
     
     .main-logo {
@@ -767,17 +767,19 @@
     }
     
     .hero-subtitle-large {
-        font-size: var(--font-xl); /* 텍스트 크게 */
+        font-size: 30px; /* 크기 증가 */
         font-weight: 700;
         letter-spacing: 0.01em;
-        line-height: 1.2; /* 줄간격 줄임 */
+        line-height: 1.2;
         padding: 0;
         width: 100%;
         max-width: 400px;
-        margin: 0 auto 20px auto; /* 하단 여백 추가 */
-        word-spacing: 0.05em; /* 단어 간격 줄임 */
+        margin: 0 auto;
+        word-spacing: 0.05em;
         white-space: normal;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5); /* 그림자 강화 */
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+        position: relative;
+        padding-bottom: 15px; /* 하단 여백 추가 */
     }
     
     .hero-cta-buttons {
